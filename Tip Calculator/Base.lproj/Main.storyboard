@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount($45)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="met-8e-QZA">
+                                <rect key="frame" x="279" y="431" width="115" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mDC-dw-lDv" userLabel="Label Stack View">
+                                <rect key="frame" x="20" y="417.5" width="101" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-NT-bzB">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBI-sv-Tb3">
+                                        <rect key="frame" x="0.0" y="40.5" width="101" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HfH-NT-bzB" firstAttribute="centerX" secondItem="mDC-dw-lDv" secondAttribute="centerX" id="D3u-X9-dzM"/>
+                                    <constraint firstItem="jBI-sv-Tb3" firstAttribute="top" secondItem="HfH-NT-bzB" secondAttribute="bottom" constant="20" id="Lfj-kr-8B8"/>
+                                    <constraint firstItem="HfH-NT-bzB" firstAttribute="centerY" secondItem="mDC-dw-lDv" secondAttribute="centerY" id="tJy-6S-A1u"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T65-7B-MF7" userLabel="Amounts Stack View">
+                                <rect key="frame" x="180.5" y="417.5" width="53.5" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20.87" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn6-hz-W6X">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw1-cv-bd9">
+                                        <rect key="frame" x="0.0" y="40.5" width="53.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-Bo-K1o">
+                                <rect key="frame" x="40" y="336.5" width="334" height="32"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="2DC-kL-i5U"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-rY-Ox5">
+                                <rect key="frame" x="175" y="528.5" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="didTapCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQF-z7-g58"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T65-7B-MF7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1KZ-rq-rtp"/>
+                            <constraint firstItem="mDC-dw-lDv" firstAttribute="top" secondItem="K2v-Bo-K1o" secondAttribute="bottom" constant="50" id="3xj-Wb-VMp"/>
+                            <constraint firstItem="T65-7B-MF7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9L7-7h-fQm"/>
+                            <constraint firstItem="hPX-rY-Ox5" firstAttribute="top" secondItem="T65-7B-MF7" secondAttribute="bottom" constant="50" id="BDx-RP-6kP"/>
+                            <constraint firstItem="T65-7B-MF7" firstAttribute="centerY" secondItem="mDC-dw-lDv" secondAttribute="centerY" id="HQ2-A6-qXe"/>
+                            <constraint firstItem="K2v-Bo-K1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jhu-4k-MlK"/>
+                            <constraint firstItem="K2v-Bo-K1o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="M9b-lO-k4K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2v-Bo-K1o" secondAttribute="trailing" constant="40" id="anr-DD-JoZ"/>
+                            <constraint firstItem="hPX-rY-Ox5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gEf-7Y-Asj"/>
+                            <constraint firstItem="met-8e-QZA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lcy-SW-fAG"/>
+                            <constraint firstItem="mDC-dw-lDv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lfS-HB-9o9"/>
+                            <constraint firstItem="T65-7B-MF7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nrK-eF-Ddc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="met-8e-QZA" secondAttribute="trailing" constant="20" id="pD1-Ad-H9Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BillAmountTextfield" destination="met-8e-QZA" id="4Af-3R-Kx9"/>
+                        <outlet property="TipAmountLabel" destination="Xn6-hz-W6X" id="LRo-97-is2"/>
+                        <outlet property="TipSegmentedControl" destination="K2v-Bo-K1o" id="8dG-kf-dLu"/>
+                        <outlet property="TotalAmountLabel" destination="mw1-cv-bd9" id="eGr-QL-I50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
